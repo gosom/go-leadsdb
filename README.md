@@ -1,5 +1,9 @@
 # go-leadsdb
 
+[![GoDoc](https://godoc.org/github.com/gosom/go-leadsdb?status.svg)](https://godoc.org/github.com/gosom/go-leadsdb)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gosom/go-leadsdb)](https://goreportcard.com/report/github.com/gosom/go-leadsdb)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Go SDK for the [LeadsDB API](https://getleadsdb.com).
 
 ## Installation
@@ -8,7 +12,7 @@ Go SDK for the [LeadsDB API](https://getleadsdb.com).
 go get github.com/gosom/go-leadsdb
 ```
 
-Requires Go 1.25+.
+Requires Go 1.23+.
 
 ## Quick Start
 
