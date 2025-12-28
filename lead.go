@@ -26,8 +26,10 @@ type Lead struct {
 	Country string `json:"country,omitempty"`
 	// PostalCode is the postal or ZIP code of the business location.
 	PostalCode string `json:"postal_code,omitempty"`
-	// Coordinates holds the latitude and longitude of the business location.
-	Coordinates *Coordinate `json:"coordinates,omitempty"`
+	// Latitude is the latitude of the business location.
+	Latitude *float64 `json:"latitude,omitempty"`
+	// Longitude is the longitude of the business location.
+	Longitude *float64 `json:"longitude,omitempty"`
 
 	// Contact information
 	// Phone is the contact phone number for the business.
@@ -70,14 +72,6 @@ type Lead struct {
 	UpdatedAt UnixTime `json:"updated_at"`
 }
 
-// Coordinate represents geographical coordinates.
-type Coordinate struct {
-	// Latitude is the latitude value.
-	Latitude float64 `json:"latitude"`
-	// Longitude is the longitude value.
-	Longitude float64 `json:"longitude"`
-}
-
 // UpdateLeadInput contains the fields for updating an existing lead.
 // All fields are optional; only non-nil fields will be updated.
 type UpdateLeadInput struct {
@@ -86,12 +80,13 @@ type UpdateLeadInput struct {
 	Description *string `json:"description,omitempty"`
 
 	// Location fields
-	Address     *string     `json:"address,omitempty"`
-	City        *string     `json:"city,omitempty"`
-	State       *string     `json:"state,omitempty"`
-	Country     *string     `json:"country,omitempty"`
-	PostalCode  *string     `json:"postal_code,omitempty"`
-	Coordinates *Coordinate `json:"coordinates,omitempty"`
+	Address    *string  `json:"address,omitempty"`
+	City       *string  `json:"city,omitempty"`
+	State      *string  `json:"state,omitempty"`
+	Country    *string  `json:"country,omitempty"`
+	PostalCode *string  `json:"postal_code,omitempty"`
+	Latitude   *float64 `json:"latitude,omitempty"`
+	Longitude  *float64 `json:"longitude,omitempty"`
 
 	// Contact information
 	Phone   *string `json:"phone,omitempty"`

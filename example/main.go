@@ -28,10 +28,8 @@ func main() {
 		State:       "CA",
 		Country:     "USA",
 		PostalCode:  "94105",
-		Coordinates: &leadsdb.Coordinate{
-			Latitude:  37.7749,
-			Longitude: -122.4194,
-		},
+		Latitude:    leadsdb.Ptr(37.7749),
+		Longitude:   leadsdb.Ptr(-122.4194),
 		Phone:       "+1-555-123-4567",
 		Email:       "contact@acme.com",
 		Website:     "https://acme.com",
